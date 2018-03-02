@@ -86,16 +86,16 @@ DATABASES = {
 
 REST_FRAMEWORK = {
     'PAGINATE_BY': 10,
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'usuario.authentication.TokenAuthentication',
-    ),
-    'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticated',
-    ),
-    'DEFAULT_RENDERER_CLASSES': (
-        'rest_framework.renderers.JSONRenderer',
-    ),
-    'UNICODE_JSON': False,
+    # 'DEFAULT_AUTHENTICATION_CLASSES': (
+    #     'usuario.authentication.TokenAuthentication',
+    # ),
+    # 'DEFAULT_PERMISSION_CLASSES': (
+    #     'rest_framework.permissions.IsAuthenticated',
+    # ),
+    # 'DEFAULT_RENDERER_CLASSES': (
+    #     'rest_framework.renderers.JSONRenderer',
+    # ),
+    # 'UNICODE_JSON': False,
 }
 
 # Password validation
@@ -151,7 +151,7 @@ TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'templates'),)
 CORS_ORIGIN_ALLOW_ALL = True
 
 # Esta variable cambia la authentication de Django por defecto, a la customizada por nosotros.
-AUTHENTICATION_BACKENDS = ['usuario.backends.PeruEducaBackends']
+# AUTHENTICATION_BACKENDS = ['usuario.backends.PeruEducaBackends']
 
 # Parametro configurable, para saber cuantos dias va durar el token
 DEFAULT_DAYS_EXPIRATION_TOKEN_REQUEST = 1
